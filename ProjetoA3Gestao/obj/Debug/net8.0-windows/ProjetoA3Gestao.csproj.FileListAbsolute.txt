@@ -1,0 +1,17 @@
+C:\Users\Kateto\source\repos\ProjetoA3Gestao\bin\Debug\net8.0-windows\ProjetoA3Gestao.exe
+C:\Users\Kateto\source\repos\ProjetoA3Gestao\bin\Debug\net8.0-windows\ProjetoA3Gestao.deps.json
+C:\Users\Kateto\source\repos\ProjetoA3Gestao\bin\Debug\net8.0-windows\ProjetoA3Gestao.runtimeconfig.json
+C:\Users\Kateto\source\repos\ProjetoA3Gestao\bin\Debug\net8.0-windows\ProjetoA3Gestao.dll
+C:\Users\Kateto\source\repos\ProjetoA3Gestao\bin\Debug\net8.0-windows\ProjetoA3Gestao.pdb
+C:\Users\Kateto\source\repos\ProjetoA3Gestao\obj\Debug\net8.0-windows\ProjetoA3Gestao.csproj.GenerateResource.cache
+C:\Users\Kateto\source\repos\ProjetoA3Gestao\obj\Debug\net8.0-windows\ProjetoA3Gestao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kateto\source\repos\ProjetoA3Gestao\obj\Debug\net8.0-windows\ProjetoA3Gestao.AssemblyInfoInputs.cache
+C:\Users\Kateto\source\repos\ProjetoA3Gestao\obj\Debug\net8.0-windows\ProjetoA3Gestao.AssemblyInfo.cs
+C:\Users\Kateto\source\repos\ProjetoA3Gestao\obj\Debug\net8.0-windows\ProjetoA3Gestao.csproj.CoreCompileInputs.cache
+C:\Users\Kateto\source\repos\ProjetoA3Gestao\obj\Debug\net8.0-windows\ProjetoA3Gestao.dll
+C:\Users\Kateto\source\repos\ProjetoA3Gestao\obj\Debug\net8.0-windows\refint\ProjetoA3Gestao.dll
+C:\Users\Kateto\source\repos\ProjetoA3Gestao\obj\Debug\net8.0-windows\ProjetoA3Gestao.pdb
+C:\Users\Kateto\source\repos\ProjetoA3Gestao\obj\Debug\net8.0-windows\ProjetoA3Gestao.genruntimeconfig.cache
+C:\Users\Kateto\source\repos\ProjetoA3Gestao\obj\Debug\net8.0-windows\ref\ProjetoA3Gestao.dll
+C:\Users\Kateto\source\repos\ProjetoA3Gestao\obj\Debug\net8.0-windows\ProjetoA3Gestao.MainForm.resources
+C:\Users\Kateto\source\repos\ProjetoA3Gestao\obj\Debug\net8.0-windows\ProjetoA3Gestao.View.UsuarioForm.resources
