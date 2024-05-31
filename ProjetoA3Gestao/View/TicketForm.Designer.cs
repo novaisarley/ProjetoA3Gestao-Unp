@@ -22,7 +22,7 @@
             txtDescricao = new TextBox();
             cmbStatus = new ComboBox();
             cmbPrioridade = new ComboBox();
-            lstTickets = new ListBox();
+            dgvTickets = new DataGridView();
             cmbUsuarios = new ComboBox();
             label1 = new Label();
             label2 = new Label();
@@ -30,13 +30,14 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dgvTickets).BeginInit();
             SuspendLayout();
             // 
             // btnCreateTicket
             // 
-            btnCreateTicket.Location = new Point(12, 371);
+            btnCreateTicket.Location = new Point(12, 361);
             btnCreateTicket.Name = "btnCreateTicket";
-            btnCreateTicket.Size = new Size(75, 25);
+            btnCreateTicket.Size = new Size(120, 42);
             btnCreateTicket.TabIndex = 0;
             btnCreateTicket.Text = "Create";
             btnCreateTicket.UseVisualStyleBackColor = true;
@@ -44,9 +45,9 @@
             // 
             // btnUpdateTicket
             // 
-            btnUpdateTicket.Location = new Point(93, 371);
+            btnUpdateTicket.Location = new Point(213, 361);
             btnUpdateTicket.Name = "btnUpdateTicket";
-            btnUpdateTicket.Size = new Size(75, 25);
+            btnUpdateTicket.Size = new Size(120, 42);
             btnUpdateTicket.TabIndex = 1;
             btnUpdateTicket.Text = "Update";
             btnUpdateTicket.UseVisualStyleBackColor = true;
@@ -54,9 +55,9 @@
             // 
             // btnDeleteTicket
             // 
-            btnDeleteTicket.Location = new Point(174, 371);
+            btnDeleteTicket.Location = new Point(413, 361);
             btnDeleteTicket.Name = "btnDeleteTicket";
-            btnDeleteTicket.Size = new Size(75, 25);
+            btnDeleteTicket.Size = new Size(120, 42);
             btnDeleteTicket.TabIndex = 2;
             btnDeleteTicket.Text = "Delete";
             btnDeleteTicket.UseVisualStyleBackColor = true;
@@ -71,39 +72,41 @@
             // 
             // txtDescricao
             // 
-            txtDescricao.Location = new Point(12, 114);
+            txtDescricao.Location = new Point(12, 79);
             txtDescricao.Name = "txtDescricao";
-            txtDescricao.Size = new Size(237, 23);
+            txtDescricao.Size = new Size(521, 23);
             txtDescricao.TabIndex = 4;
             // 
             // cmbStatus
             // 
-            cmbStatus.Location = new Point(12, 160);
+            cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbStatus.Location = new Point(10, 132);
             cmbStatus.Name = "cmbStatus";
             cmbStatus.Size = new Size(237, 23);
             cmbStatus.TabIndex = 5;
             // 
             // cmbPrioridade
             // 
-            cmbPrioridade.Location = new Point(12, 203);
+            cmbPrioridade.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPrioridade.Location = new Point(296, 131);
             cmbPrioridade.Name = "cmbPrioridade";
             cmbPrioridade.Size = new Size(237, 23);
             cmbPrioridade.TabIndex = 6;
             // 
-            // lstTickets
+            // dgvTickets
             // 
-            lstTickets.FormattingEnabled = true;
-            lstTickets.ItemHeight = 15;
-            lstTickets.Location = new Point(12, 263);
-            lstTickets.Name = "lstTickets";
-            lstTickets.Size = new Size(237, 94);
-            lstTickets.TabIndex = 7;
-            lstTickets.SelectedIndexChanged += lstTickets_SelectedIndexChanged;
+            dgvTickets.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTickets.Location = new Point(12, 191);
+            dgvTickets.Name = "dgvTickets";
+            dgvTickets.Size = new Size(521, 157);
+            dgvTickets.TabIndex = 7;
+            dgvTickets.SelectionChanged += dgvTickets_SelectionChanged;
             // 
             // cmbUsuarios
             // 
+            cmbUsuarios.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbUsuarios.FormattingEnabled = true;
-            cmbUsuarios.Location = new Point(12, 69);
+            cmbUsuarios.Location = new Point(296, 26);
             cmbUsuarios.Name = "cmbUsuarios";
             cmbUsuarios.Size = new Size(237, 23);
             cmbUsuarios.TabIndex = 8;
@@ -120,7 +123,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 52);
+            label2.Location = new Point(296, 9);
             label2.Name = "label2";
             label2.Size = new Size(72, 15);
             label2.TabIndex = 10;
@@ -129,7 +132,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 96);
+            label3.Location = new Point(12, 61);
             label3.Name = "label3";
             label3.Size = new Size(58, 15);
             label3.TabIndex = 11;
@@ -138,7 +141,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(12, 186);
+            label4.Location = new Point(296, 114);
             label4.Name = "label4";
             label4.Size = new Size(61, 15);
             label4.TabIndex = 12;
@@ -147,7 +150,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(12, 142);
+            label5.Location = new Point(10, 114);
             label5.Name = "label5";
             label5.Size = new Size(39, 15);
             label5.TabIndex = 13;
@@ -157,7 +160,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(12, 237);
+            label6.Location = new Point(10, 168);
             label6.Name = "label6";
             label6.Size = new Size(58, 20);
             label6.TabIndex = 14;
@@ -165,7 +168,7 @@
             // 
             // TicketForm
             // 
-            ClientSize = new Size(269, 412);
+            ClientSize = new Size(569, 462);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -173,7 +176,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(cmbUsuarios);
-            Controls.Add(lstTickets);
+            Controls.Add(dgvTickets);
             Controls.Add(cmbPrioridade);
             Controls.Add(cmbStatus);
             Controls.Add(txtDescricao);
@@ -183,19 +186,20 @@
             Controls.Add(btnCreateTicket);
             Name = "TicketForm";
             Text = "Ticket Manager";
+            ((System.ComponentModel.ISupportInitialize)dgvTickets).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
-        private System.Windows.Forms.Button btnCreateTicket;
-        private System.Windows.Forms.Button btnUpdateTicket;
-        private System.Windows.Forms.Button btnDeleteTicket;
-        private System.Windows.Forms.TextBox txtTitulo;
-        private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.ComboBox cmbStatus;
-        private System.Windows.Forms.ComboBox cmbPrioridade;
-        private System.Windows.Forms.ListBox lstTickets;
-        private System.Windows.Forms.ComboBox cmbUsuarios; // Novo ComboBox para selecionar usuário
+        private Button btnCreateTicket;
+        private Button btnUpdateTicket;
+        private Button btnDeleteTicket;
+        private TextBox txtTitulo;
+        private TextBox txtDescricao;
+        private ComboBox cmbStatus;
+        private ComboBox cmbPrioridade;
+        private DataGridView dgvTickets;
+        private ComboBox cmbUsuarios;
         private Label label1;
         private Label label2;
         private Label label3;
