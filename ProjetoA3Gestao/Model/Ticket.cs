@@ -15,4 +15,5 @@ namespace ProjetoA3Gestao.Model
         public string Prioridade { get; set; }
         public Usuario Usuario { get; set; }
     }
+    
 }

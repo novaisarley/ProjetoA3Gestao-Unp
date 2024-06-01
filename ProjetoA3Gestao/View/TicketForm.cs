@@ -1,8 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using ProjetoA3Gestao.Model;
 using ProjetoA3Gestao.Controller;
-using System.Collections.Generic;
 
 namespace ProjetoA3Gestao
 {
@@ -14,7 +14,7 @@ namespace ProjetoA3Gestao
         {
             InitializeComponent();
             LoadUsuarios();
-            InitializeDataGridView();
+            InitializeListBox();
             RefreshTicketList();
             cmbPrioridade.DataSource = new List<string> { "baixa", "média", "alta", "urgente" };
             cmbStatus.DataSource = new List<string> { "na fila", "em andamento", "fechado", "cancelado" };
@@ -26,27 +26,25 @@ namespace ProjetoA3Gestao
             cmbUsuarios.DisplayMember = "Nome";
         }
 
-        private void InitializeDataGridView()
+        private void InitializeListBox()
         {
-            dgvTickets.AutoGenerateColumns = false;
-            dgvTickets.Columns.Clear();
-            dgvTickets.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "ID", DataPropertyName = "Id", ReadOnly = true });
-            dgvTickets.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Título", DataPropertyName = "Titulo", ReadOnly = true });
-            dgvTickets.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Descrição", DataPropertyName = "Descricao", ReadOnly = true });
-            dgvTickets.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Status", DataPropertyName = "Status", ReadOnly = true });
-            dgvTickets.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Prioridade", DataPropertyName = "Prioridade", ReadOnly = true });
-            dgvTickets.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Usuário", DataPropertyName = "Usuario.Nome", ReadOnly = true });
+            lstTickets.Items.Clear();
         }
 
         private void RefreshTicketList()
         {
-            dgvTickets.DataSource = null;
+            lstTickets.Items.Clear();
             var tickets = TicketRepository.Instance.GetTickets();
-            dgvTickets.DataSource = tickets;
+            foreach (var ticket in tickets)
+            {
+                // Adicionar uma representação manual de cada ticket à lista
+                var displayText = $"Título: {ticket.Titulo} | Status: {ticket.Status} | Prioridade: ({ticket.Prioridade})";
+                lstTickets.Items.Add(new ListBoxItem { DisplayText = displayText, Ticket = ticket });
+            }
 
             if (tickets.Count > 0)
             {
-                dgvTickets.Rows[0].Selected = true;
+                lstTickets.SelectedIndex = 0;
             }
         }
 
@@ -67,10 +65,10 @@ namespace ProjetoA3Gestao
 
         private void btnUpdateTicket_Click(object sender, EventArgs e)
         {
-            if (dgvTickets.SelectedRows.Count > 0)
+            if (lstTickets.SelectedItem != null)
             {
-                var selectedRow = dgvTickets.SelectedRows[0];
-                var ticket = (Ticket)selectedRow.DataBoundItem;
+                var selectedItem = (ListBoxItem)lstTickets.SelectedItem;
+                var ticket = selectedItem.Ticket;
 
                 ticket.Titulo = txtTitulo.Text;
                 ticket.Descricao = txtDescricao.Text;
@@ -87,10 +85,10 @@ namespace ProjetoA3Gestao
 
         private void btnDeleteTicket_Click(object sender, EventArgs e)
         {
-            if (dgvTickets.SelectedRows.Count > 0)
+            if (lstTickets.SelectedItem != null)
             {
-                var selectedRow = dgvTickets.SelectedRows[0];
-                var ticket = (Ticket)selectedRow.DataBoundItem;
+                var selectedItem = (ListBoxItem)lstTickets.SelectedItem;
+                var ticket = selectedItem.Ticket;
 
                 var deleteCommand = new DeleteTicketCommand(ticket);
                 deleteCommand.Execute();
@@ -99,20 +97,18 @@ namespace ProjetoA3Gestao
             }
         }
 
-        private void dgvTickets_SelectionChanged(object sender, EventArgs e)
+        private void lstTickets_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (dgvTickets.SelectedRows.Count > 0 && dgvTickets.SelectedRows[0].Index != -1)
+            if (lstTickets.SelectedItem != null)
             {
-                var selectedRow = dgvTickets.SelectedRows[0];
-                var selectedRowIndex = dgvTickets.SelectedRows[0].Index;
-                var ticket = (Ticket)selectedRow.DataBoundItem;
+                var selectedItem = (ListBoxItem)lstTickets.SelectedItem;
+                var ticket = selectedItem.Ticket;
+
                 txtTitulo.Text = ticket.Titulo;
                 txtDescricao.Text = ticket.Descricao;
                 cmbStatus.SelectedItem = ticket.Status;
                 cmbPrioridade.SelectedItem = ticket.Prioridade;
-                //cmbUsuarios.SelectedItem = ticket.Usuario;
-
-                dgvTickets.Rows[selectedRowIndex].Selected = true;
+                cmbUsuarios.SelectedItem = ticket.Usuario;
             }
             else
             {
@@ -121,6 +117,17 @@ namespace ProjetoA3Gestao
                 cmbStatus.SelectedIndex = -1;
                 cmbPrioridade.SelectedIndex = -1;
                 cmbUsuarios.SelectedIndex = -1;
+            }
+        }
+
+        private class ListBoxItem
+        {
+            public string DisplayText { get; set; }
+            public Ticket Ticket { get; set; }
+
+            public override string ToString()
+            {
+                return DisplayText;
             }
         }
     }

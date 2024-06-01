@@ -22,7 +22,7 @@
             txtDescricao = new TextBox();
             cmbStatus = new ComboBox();
             cmbPrioridade = new ComboBox();
-            dgvTickets = new DataGridView();
+            lstTickets = new ListBox();
             cmbUsuarios = new ComboBox();
             label1 = new Label();
             label2 = new Label();
@@ -30,7 +30,6 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dgvTickets).BeginInit();
             SuspendLayout();
             // 
             // btnCreateTicket
@@ -93,14 +92,14 @@
             cmbPrioridade.Size = new Size(237, 23);
             cmbPrioridade.TabIndex = 6;
             // 
-            // dgvTickets
+            // lstTickets
             // 
-            dgvTickets.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTickets.Location = new Point(12, 191);
-            dgvTickets.Name = "dgvTickets";
-            dgvTickets.Size = new Size(521, 157);
-            dgvTickets.TabIndex = 7;
-            dgvTickets.SelectionChanged += dgvTickets_SelectionChanged;
+            lstTickets.FormattingEnabled = true;
+            lstTickets.Location = new Point(12, 191);
+            lstTickets.Name = "lstTickets";
+            lstTickets.Size = new Size(521, 157);
+            lstTickets.TabIndex = 7;
+            lstTickets.SelectedIndexChanged += lstTickets_SelectedIndexChanged;
             // 
             // cmbUsuarios
             // 
@@ -176,7 +175,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(cmbUsuarios);
-            Controls.Add(dgvTickets);
+            Controls.Add(lstTickets);
             Controls.Add(cmbPrioridade);
             Controls.Add(cmbStatus);
             Controls.Add(txtDescricao);
@@ -186,7 +185,6 @@
             Controls.Add(btnCreateTicket);
             Name = "TicketForm";
             Text = "Ticket Manager";
-            ((System.ComponentModel.ISupportInitialize)dgvTickets).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -198,7 +196,7 @@
         private TextBox txtDescricao;
         private ComboBox cmbStatus;
         private ComboBox cmbPrioridade;
-        private DataGridView dgvTickets;
+        private ListBox lstTickets;
         private ComboBox cmbUsuarios;
         private Label label1;
         private Label label2;
