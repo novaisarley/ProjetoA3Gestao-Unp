@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|c:\\users\\nasci\\source\\repos\\projetoa3gestao-unp\\projetoa3gestao\\view\\ticketform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|solutionrelative:view\\ticketform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\view\\usuarioform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|solutionrelative:view\\usuarioform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\view\\ticketform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|solutionrelative:view\\ticketform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|c:\\users\\nasci\\source\\repos\\projetoa3gestao-unp\\projetoa3gestao\\model\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|solutionrelative:model\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|c:\\users\\nasci\\source\\repos\\projetoa3gestao-unp\\projetoa3gestao\\view\\usuarioform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|solutionrelative:view\\usuarioform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|c:\\users\\nasci\\source\\repos\\projetoa3gestao-unp\\projetoa3gestao\\view\\usuarioform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|solutionrelative:view\\usuarioform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|c:\\users\\nasci\\source\\repos\\projetoa3gestao-unp\\projetoa3gestao\\view\\ticketform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|solutionrelative:view\\ticketform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|c:\\users\\nasci\\source\\repos\\projetoa3gestao-unp\\projetoa3gestao\\model\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,14 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|c:\\users\\nasci\\source\\repos\\projetoa3gestao-unp\\projetoa3gestao\\view\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|solutionrelative:view\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|c:\\users\\nasci\\source\\repos\\projetoa3gestao-unp\\projetoa3gestao\\view\\usuarioform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|solutionrelative:view\\usuarioform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\view\\usuarioform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|solutionrelative:view\\usuarioform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,59 +70,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "DocumentIndex": 2,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\Model\\Usuario.cs",
+              "RelativeDocumentMoniker": "Model\\Usuario.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\Model\\Usuario.cs",
+              "RelativeToolTip": "Model\\Usuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T20:00:09.911Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TicketForm.cs",
-              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\TicketForm.cs",
-              "RelativeDocumentMoniker": "View\\TicketForm.cs",
-              "ToolTip": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\TicketForm.cs",
-              "RelativeToolTip": "View\\TicketForm.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAgwCgAAABUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T22:21:52.917Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TicketForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\TicketForm.Designer.cs",
-              "RelativeDocumentMoniker": "View\\TicketForm.Designer.cs",
-              "ToolTip": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\TicketForm.Designer.cs",
-              "RelativeToolTip": "View\\TicketForm.Designer.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAswNAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T20:26:18.667Z",
+              "WhenOpened": "2024-06-04T01:18:55.423Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\MainForm.cs",
-              "RelativeDocumentMoniker": "View\\MainForm.cs",
-              "ToolTip": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\MainForm.cs",
-              "RelativeToolTip": "View\\MainForm.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABoAAAAMAAAA",
+              "Title": "UsuarioForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\UsuarioForm.Designer.cs",
+              "RelativeDocumentMoniker": "View\\UsuarioForm.Designer.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\UsuarioForm.Designer.cs",
+              "RelativeToolTip": "View\\UsuarioForm.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T20:22:31.779Z",
+              "WhenOpened": "2024-06-04T01:12:25.901Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsuarioForm.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\UsuarioForm.cs",
+              "RelativeDocumentMoniker": "View\\UsuarioForm.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\UsuarioForm.cs",
+              "RelativeToolTip": "View\\UsuarioForm.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAlwCQAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T20:07:56.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuarioForm.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\UsuarioForm.cs",
+              "RelativeDocumentMoniker": "View\\UsuarioForm.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\UsuarioForm.cs [Projeto]",
+              "RelativeToolTip": "View\\UsuarioForm.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T20:06:43.022Z",
+              "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
@@ -130,7 +137,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "TicketForm.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\TicketForm.cs",
+              "RelativeDocumentMoniker": "View\\TicketForm.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\TicketForm.cs",
+              "RelativeToolTip": "View\\TicketForm.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAgwC8AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T22:21:52.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Ticket.cs",
               "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\Model\\Ticket.cs",
               "RelativeDocumentMoniker": "Model\\Ticket.cs",
@@ -138,23 +158,49 @@
               "RelativeToolTip": "Model\\Ticket.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T01:13:56.025Z",
+              "WhenOpened": "2024-05-31T01:13:56.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\MainForm.cs",
+              "RelativeDocumentMoniker": "View\\MainForm.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\MainForm.cs",
+              "RelativeToolTip": "View\\MainForm.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T20:22:31.779Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UsuarioForm.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\UsuarioForm.cs",
-              "RelativeDocumentMoniker": "View\\UsuarioForm.cs",
-              "ToolTip": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\UsuarioForm.cs [Projeto]",
-              "RelativeToolTip": "View\\UsuarioForm.cs [Projeto]",
+              "DocumentIndex": 7,
+              "Title": "TicketForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\TicketForm.Designer.cs",
+              "RelativeDocumentMoniker": "View\\TicketForm.Designer.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\TicketForm.Designer.cs",
+              "RelativeToolTip": "View\\TicketForm.Designer.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAswNAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T20:06:43.022Z"
+              "WhenOpened": "2024-05-30T20:26:18.667Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T20:00:09.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "TicketRepository.cs",
               "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\Model\\TicketRepository.cs",
               "RelativeDocumentMoniker": "Model\\TicketRepository.cs",
@@ -166,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "TicketFactory.cs",
               "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\Model\\TicketFactory.cs",
               "RelativeDocumentMoniker": "Model\\TicketFactory.cs",
@@ -178,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "CreateTicketCommand.cs",
               "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\Controller\\CreateTicketCommand.cs",
               "RelativeDocumentMoniker": "Controller\\CreateTicketCommand.cs",
@@ -190,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "View\\MainForm.Designer.cs",
@@ -202,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "MainForm.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\MainForm.cs",
               "RelativeDocumentMoniker": "View\\MainForm.cs",
@@ -210,18 +256,6 @@
               "RelativeToolTip": "View\\MainForm.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T20:22:07.621Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UsuarioForm.cs",
-              "DocumentMoniker": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\UsuarioForm.cs",
-              "RelativeDocumentMoniker": "View\\UsuarioForm.cs",
-              "ToolTip": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\UsuarioForm.cs",
-              "RelativeToolTip": "View\\UsuarioForm.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAlwCQAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T20:07:56.916Z"
             }
           ]
         }

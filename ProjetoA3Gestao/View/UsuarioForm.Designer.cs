@@ -15,116 +15,195 @@
 
         private void InitializeComponent()
         {
-            this.btnCreateUsuario = new System.Windows.Forms.Button();
-            this.btnUpdateUsuario = new System.Windows.Forms.Button();
-            this.btnDeleteUsuario = new System.Windows.Forms.Button();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtEndereco = new System.Windows.Forms.TextBox();
-            this.txtCep = new System.Windows.Forms.TextBox();
-            this.txtNumeroTelefone = new System.Windows.Forms.TextBox();
-            this.txtCpf = new System.Windows.Forms.TextBox();
-            this.lstUsuarios = new System.Windows.Forms.ListBox();
-            this.SuspendLayout();
+            btnCreateUsuario = new Button();
+            btnUpdateUsuario = new Button();
+            btnDeleteUsuario = new Button();
+            txtNome = new TextBox();
+            txtEmail = new TextBox();
+            txtEndereco = new TextBox();
+            txtCep = new TextBox();
+            txtNumeroTelefone = new TextBox();
+            txtCpf = new TextBox();
+            lstUsuarios = new ListBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            SuspendLayout();
             // 
             // btnCreateUsuario
             // 
-            this.btnCreateUsuario.Location = new System.Drawing.Point(12, 226);
-            this.btnCreateUsuario.Name = "btnCreateUsuario";
-            this.btnCreateUsuario.Size = new System.Drawing.Size(75, 23);
-            this.btnCreateUsuario.TabIndex = 0;
-            this.btnCreateUsuario.Text = "Create";
-            this.btnCreateUsuario.UseVisualStyleBackColor = true;
-            this.btnCreateUsuario.Click += new System.EventHandler(this.btnCreateUsuario_Click);
+            btnCreateUsuario.Location = new Point(12, 378);
+            btnCreateUsuario.Name = "btnCreateUsuario";
+            btnCreateUsuario.Size = new Size(75, 23);
+            btnCreateUsuario.TabIndex = 0;
+            btnCreateUsuario.Text = "Create";
+            btnCreateUsuario.UseVisualStyleBackColor = true;
+            btnCreateUsuario.Click += btnCreateUsuario_Click;
             // 
             // btnUpdateUsuario
             // 
-            this.btnUpdateUsuario.Location = new System.Drawing.Point(93, 226);
-            this.btnUpdateUsuario.Name = "btnUpdateUsuario";
-            this.btnUpdateUsuario.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdateUsuario.TabIndex = 1;
-            this.btnUpdateUsuario.Text = "Update";
-            this.btnUpdateUsuario.UseVisualStyleBackColor = true;
-            this.btnUpdateUsuario.Click += new System.EventHandler(this.btnUpdateUsuario_Click);
+            btnUpdateUsuario.Location = new Point(93, 378);
+            btnUpdateUsuario.Name = "btnUpdateUsuario";
+            btnUpdateUsuario.Size = new Size(75, 23);
+            btnUpdateUsuario.TabIndex = 1;
+            btnUpdateUsuario.Text = "Update";
+            btnUpdateUsuario.UseVisualStyleBackColor = true;
+            btnUpdateUsuario.Click += btnUpdateUsuario_Click;
             // 
             // btnDeleteUsuario
             // 
-            this.btnDeleteUsuario.Location = new System.Drawing.Point(174, 226);
-            this.btnDeleteUsuario.Name = "btnDeleteUsuario";
-            this.btnDeleteUsuario.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteUsuario.TabIndex = 2;
-            this.btnDeleteUsuario.Text = "Delete";
-            this.btnDeleteUsuario.UseVisualStyleBackColor = true;
-            this.btnDeleteUsuario.Click += new System.EventHandler(this.btnDeleteUsuario_Click);
+            btnDeleteUsuario.Location = new Point(174, 378);
+            btnDeleteUsuario.Name = "btnDeleteUsuario";
+            btnDeleteUsuario.Size = new Size(75, 23);
+            btnDeleteUsuario.TabIndex = 2;
+            btnDeleteUsuario.Text = "Delete";
+            btnDeleteUsuario.UseVisualStyleBackColor = true;
+            btnDeleteUsuario.Click += btnDeleteUsuario_Click;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(12, 12);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(237, 20);
-            this.txtNome.TabIndex = 3;
+            txtNome.Location = new Point(12, 33);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(237, 23);
+            txtNome.TabIndex = 3;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(12, 38);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(237, 20);
-            this.txtEmail.TabIndex = 4;
+            txtEmail.Location = new Point(12, 77);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(237, 23);
+            txtEmail.TabIndex = 4;
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Location = new System.Drawing.Point(12, 64);
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(237, 20);
-            this.txtEndereco.TabIndex = 5;
+            txtEndereco.Location = new Point(12, 120);
+            txtEndereco.Name = "txtEndereco";
+            txtEndereco.Size = new Size(237, 23);
+            txtEndereco.TabIndex = 5;
             // 
             // txtCep
             // 
-            this.txtCep.Location = new System.Drawing.Point(12, 90);
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(237, 20);
-            this.txtCep.TabIndex = 6;
+            txtCep.Location = new Point(12, 165);
+            txtCep.Name = "txtCep";
+            txtCep.Size = new Size(237, 23);
+            txtCep.TabIndex = 6;
             // 
             // txtNumeroTelefone
             // 
-            this.txtNumeroTelefone.Location = new System.Drawing.Point(12, 116);
-            this.txtNumeroTelefone.Name = "txtNumeroTelefone";
-            this.txtNumeroTelefone.Size = new System.Drawing.Size(237, 20);
-            this.txtNumeroTelefone.TabIndex = 7;
+            txtNumeroTelefone.Location = new Point(12, 210);
+            txtNumeroTelefone.Name = "txtNumeroTelefone";
+            txtNumeroTelefone.Size = new Size(237, 23);
+            txtNumeroTelefone.TabIndex = 7;
             // 
             // txtCpf
             // 
-            this.txtCpf.Location = new System.Drawing.Point(12, 142);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(237, 20);
-            this.txtCpf.TabIndex = 8;
+            txtCpf.Location = new Point(12, 256);
+            txtCpf.Name = "txtCpf";
+            txtCpf.Size = new Size(237, 23);
+            txtCpf.TabIndex = 8;
             // 
             // lstUsuarios
             // 
-            this.lstUsuarios.FormattingEnabled = true;
-            this.lstUsuarios.Location = new System.Drawing.Point(12, 168);
-            this.lstUsuarios.Name = "lstUsuarios";
-            this.lstUsuarios.Size = new System.Drawing.Size(237, 52);
-            this.lstUsuarios.TabIndex = 9;
-            this.lstUsuarios.SelectedIndexChanged += new System.EventHandler(this.lstUsuarios_SelectedIndexChanged);
+            lstUsuarios.FormattingEnabled = true;
+            lstUsuarios.ItemHeight = 15;
+            lstUsuarios.Location = new Point(12, 316);
+            lstUsuarios.Name = "lstUsuarios";
+            lstUsuarios.Size = new Size(237, 49);
+            lstUsuarios.TabIndex = 9;
+            lstUsuarios.SelectedIndexChanged += lstUsuarios_SelectedIndexChanged;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 15);
+            label1.Name = "label1";
+            label1.Size = new Size(40, 15);
+            label1.TabIndex = 10;
+            label1.Text = "Nome";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(12, 59);
+            label2.Name = "label2";
+            label2.Size = new Size(36, 15);
+            label2.TabIndex = 11;
+            label2.Text = "Email";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(12, 103);
+            label3.Name = "label3";
+            label3.Size = new Size(56, 15);
+            label3.TabIndex = 12;
+            label3.Text = "Endereço";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(12, 147);
+            label4.Name = "label4";
+            label4.Size = new Size(28, 15);
+            label4.TabIndex = 13;
+            label4.Text = "CEP";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(12, 192);
+            label5.Name = "label5";
+            label5.Size = new Size(68, 15);
+            label5.TabIndex = 14;
+            label5.Text = "Nº Telefone";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(12, 238);
+            label6.Name = "label6";
+            label6.Size = new Size(28, 15);
+            label6.TabIndex = 15;
+            label6.Text = "CPF";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Location = new Point(12, 290);
+            label7.Name = "label7";
+            label7.Size = new Size(70, 20);
+            label7.TabIndex = 16;
+            label7.Text = "Usuários";
             // 
             // UsuarioForm
             // 
-            this.ClientSize = new System.Drawing.Size(261, 261);
-            this.Controls.Add(this.lstUsuarios);
-            this.Controls.Add(this.txtCpf);
-            this.Controls.Add(this.txtNumeroTelefone);
-            this.Controls.Add(this.txtCep);
-            this.Controls.Add(this.txtEndereco);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.btnDeleteUsuario);
-            this.Controls.Add(this.btnUpdateUsuario);
-            this.Controls.Add(this.btnCreateUsuario);
-            this.Name = "UsuarioForm";
-            this.Text = "User Manager";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            ClientSize = new Size(267, 437);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(lstUsuarios);
+            Controls.Add(txtCpf);
+            Controls.Add(txtNumeroTelefone);
+            Controls.Add(txtCep);
+            Controls.Add(txtEndereco);
+            Controls.Add(txtEmail);
+            Controls.Add(txtNome);
+            Controls.Add(btnDeleteUsuario);
+            Controls.Add(btnUpdateUsuario);
+            Controls.Add(btnCreateUsuario);
+            Name = "UsuarioForm";
+            Text = "User Manager";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         private System.Windows.Forms.Button btnCreateUsuario;
@@ -137,5 +216,12 @@
         private System.Windows.Forms.TextBox txtNumeroTelefone;
         private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.ListBox lstUsuarios;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label7;
     }
 }
