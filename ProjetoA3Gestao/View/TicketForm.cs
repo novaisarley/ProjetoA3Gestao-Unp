@@ -1,18 +1,29 @@
+using ProjetoA3Gestao.Controller;
+using ProjetoA3Gestao.Model;
+using ProjetoA3Gestao.Repository;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using ProjetoA3Gestao.Model;
-using ProjetoA3Gestao.Controller;
 
 namespace ProjetoA3Gestao
 {
     public partial class TicketForm : Form
     {
         private TicketFactory _ticketFactory = new ConcreteTicketFactory();
+        private SQLiteConnection _database;
+        private TicketRepository _ticketRepository;
+        private UsuarioRepository _usuarioRepository;
 
         public TicketForm()
         {
             InitializeComponent();
+
+            // Inicialize a conexão SQLite e passe-a para os repositórios
+            _database = new SQLiteConnection("Data Source=database.db;Version=3;");
+            _ticketRepository = new TicketRepository(_database);
+            _usuarioRepository = new UsuarioRepository(_database);
+
             LoadUsuarios();
             InitializeListBox();
             RefreshTicketList();
@@ -22,7 +33,7 @@ namespace ProjetoA3Gestao
 
         private void LoadUsuarios()
         {
-            cmbUsuarios.DataSource = UsuarioRepository.Instance.GetUsuarios();
+            cmbUsuarios.DataSource = _usuarioRepository.GetUsuarios();
             cmbUsuarios.DisplayMember = "Nome";
         }
 
@@ -34,10 +45,9 @@ namespace ProjetoA3Gestao
         private void RefreshTicketList()
         {
             lstTickets.Items.Clear();
-            var tickets = TicketRepository.Instance.GetTickets();
+            var tickets = _ticketRepository.GetTickets();
             foreach (var ticket in tickets)
             {
-                // Adicionar uma representação manual de cada ticket à lista
                 var displayText = $"Título: {ticket.Titulo} | Status: {ticket.Status} | Prioridade: ({ticket.Prioridade})";
                 lstTickets.Items.Add(new ListBoxItem { DisplayText = displayText, Ticket = ticket });
             }
@@ -57,7 +67,7 @@ namespace ProjetoA3Gestao
             ticket.Prioridade = cmbPrioridade.SelectedItem.ToString();
             ticket.Usuario = (Usuario)cmbUsuarios.SelectedItem;
 
-            var createCommand = new CreateTicketCommand(ticket);
+            var createCommand = new CreateTicketCommand(ticket, _ticketRepository);
             createCommand.Execute();
 
             RefreshTicketList();
@@ -76,7 +86,7 @@ namespace ProjetoA3Gestao
                 ticket.Prioridade = cmbPrioridade.SelectedItem.ToString();
                 ticket.Usuario = (Usuario)cmbUsuarios.SelectedItem;
 
-                var updateCommand = new UpdateTicketCommand(ticket);
+                var updateCommand = new UpdateTicketCommand(ticket, _ticketRepository);
                 updateCommand.Execute();
 
                 RefreshTicketList();
@@ -90,7 +100,7 @@ namespace ProjetoA3Gestao
                 var selectedItem = (ListBoxItem)lstTickets.SelectedItem;
                 var ticket = selectedItem.Ticket;
 
-                var deleteCommand = new DeleteTicketCommand(ticket);
+                var deleteCommand = new DeleteTicketCommand(ticket, _ticketRepository);
                 deleteCommand.Execute();
 
                 RefreshTicketList();
@@ -132,3 +142,4 @@ namespace ProjetoA3Gestao
         }
     }
 }
+

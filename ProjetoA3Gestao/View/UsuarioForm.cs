@@ -1,5 +1,7 @@
 ﻿using ProjetoA3Gestao.Controller;
 using ProjetoA3Gestao.Model;
+using ProjetoA3Gestao.Repository; // Importe o namespace onde está a classe UsuarioRepository
+using SQLite; // Importe a biblioteca SQLite
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,10 +18,18 @@ namespace ProjetoA3Gestao.View
     public partial class UsuarioForm : Form
     {
         private UsuarioFactory _usuarioFactory = new ConcreteUsuarioFactory();
+        private SQLiteConnection _database; // Adicione a conexão SQLite
+        private UsuarioRepository _usuarioRepository; // Remova a instância de UsuarioRepository sem inicialização
 
         public UsuarioForm()
         {
             InitializeComponent();
+
+            // Inicialize a conexão SQLite e passe-a para o repositório
+            _database = new SQLiteConnection("Data Source=database.db;Version=3;");
+            _usuarioRepository = new UsuarioRepository(_database); // Passe a conexão para o repositório
+
+            RefreshUsuarioList(); // Adicione o carregamento inicial da lista de usuários
         }
 
         private bool ValidarCampos()
@@ -144,8 +154,7 @@ namespace ProjetoA3Gestao.View
             usuario.NumeroTelefone = txtNumeroTelefone.Text;
             usuario.Cpf = txtCpf.Text;
 
-            var createCommand = new CreateUsuarioCommand(usuario);
-            createCommand.Execute();
+            _usuarioRepository.AddUsuario(usuario); // Adicionar o usuário usando UsuarioRepository
 
             RefreshUsuarioList();
         }
@@ -167,8 +176,7 @@ namespace ProjetoA3Gestao.View
                 usuario.NumeroTelefone = txtNumeroTelefone.Text;
                 usuario.Cpf = txtCpf.Text;
 
-                var updateCommand = new UpdateUsuarioCommand(usuario);
-                updateCommand.Execute();
+                _usuarioRepository.UpdateUsuario(usuario); // Atualizar o usuário usando UsuarioRepository
 
                 RefreshUsuarioList();
             }
@@ -179,8 +187,7 @@ namespace ProjetoA3Gestao.View
             var usuario = (Usuario)lstUsuarios.SelectedItem;
             if (usuario != null)
             {
-                var deleteCommand = new DeleteUsuarioCommand(usuario);
-                deleteCommand.Execute();
+                _usuarioRepository.RemoveUsuario(usuario); // Remover o usuário usando UsuarioRepository
 
                 RefreshUsuarioList();
             }
@@ -189,7 +196,7 @@ namespace ProjetoA3Gestao.View
         private void RefreshUsuarioList()
         {
             lstUsuarios.DataSource = null;
-            lstUsuarios.DataSource = UsuarioRepository.Instance.GetUsuarios();
+            lstUsuarios.DataSource = _usuarioRepository.GetUsuarios(); // Usar a instância de UsuarioRepository
             lstUsuarios.DisplayMember = "Nome";
         }
 
@@ -219,5 +226,5 @@ namespace ProjetoA3Gestao.View
 
         }
     }
-
 }
+

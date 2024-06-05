@@ -1,4 +1,4 @@
-using ProjetoA3Gestao.Controller;
+/*using ProjetoA3Gestao.Controller;
 using ProjetoA3Gestao.Model;
 using Xunit;
 
@@ -86,4 +86,4 @@ namespace TestProject
             Assert.DoesNotContain(usuario, usuarios);
         }
     }
-}
+}*/

@@ -1,46 +1,27 @@
-﻿using System;
+﻿using ProjetoA3Gestao.Model;
+using SQLite;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ProjetoA3Gestao.Model
+namespace ProjetoA3Gestao.Repository
 {
     public class UsuarioRepository
     {
-        private static UsuarioRepository _instance;
-        private List<Usuario> _usuarios;
+        private readonly SQLiteConnection _database;
 
-        private UsuarioRepository()
+        public UsuarioRepository(SQLiteConnection database)
         {
-            _usuarios = new List<Usuario>();
+            _database = database;
+            _database.CreateTable<Usuario>();
         }
 
-        public static UsuarioRepository Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new UsuarioRepository();
-                }
-                return _instance;
-            }
-        }
+        public List<Usuario> GetUsuarios() => _database.Table<Usuario>().ToList();
 
-        public List<Usuario> GetUsuarios() => _usuarios;
+        public Usuario GetUsuarioById(int id) => _database.Find<Usuario>(id);
 
-        public void AddUsuario(Usuario usuario) => _usuarios.Add(usuario);
+        public void AddUsuario(Usuario usuario) => _database.Insert(usuario);
 
-        public void RemoveUsuario(Usuario usuario) => _usuarios.Remove(usuario);
+        public void RemoveUsuario(Usuario usuario) => _database.Delete(usuario);
 
-        public void UpdateUsuario(Usuario usuario)
-        {
-            var index = _usuarios.FindIndex(u => u.Id == usuario.Id);
-            if (index != -1)
-            {
-                _usuarios[index] = usuario;
-            }
-        }
+        public void UpdateUsuario(Usuario usuario) => _database.Update(usuario);
     }
 }

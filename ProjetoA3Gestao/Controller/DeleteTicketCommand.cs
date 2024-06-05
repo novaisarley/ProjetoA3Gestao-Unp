@@ -1,25 +1,22 @@
 ﻿using ProjetoA3Gestao.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ProjetoA3Gestao.Repository;
 
 namespace ProjetoA3Gestao.Controller
 {
     public class DeleteTicketCommand : ICommand
     {
         private Ticket _ticket;
+        private TicketRepository _ticketRepository;
 
-        public DeleteTicketCommand(Ticket ticket)
+        public DeleteTicketCommand(Ticket ticket, TicketRepository ticketRepository)
         {
             _ticket = ticket;
+            _ticketRepository = ticketRepository;
         }
 
         public void Execute()
         {
-            TicketRepository.Instance.RemoveTicket(_ticket);
+            _ticketRepository.RemoveTicket(_ticket);
         }
-
     }
 }

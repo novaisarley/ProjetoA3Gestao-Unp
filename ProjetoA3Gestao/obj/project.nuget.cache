@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "vY6V1jjfiB4=",
+  "dgSpecHash": "jxGozwystiZom9wgSucp3DkNS4X/9c7kJ6BG6HqGTpQzrLtjJePvIQdX/A79m1zwV+/XTuw7VA7BnpB6DQ61Ag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nasci\\source\\repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\ProjetoA3Gestao.csproj",
+  "projectFilePath": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\ProjetoA3Gestao.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\nasci\\.nuget\\packages\\sqlite-net-pcl\\1.9.172\\sqlite-net-pcl.1.9.172.nupkg.sha512",
-    "C:\\Users\\nasci\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.1.2\\sqlitepclraw.bundle_green.2.1.2.nupkg.sha512",
-    "C:\\Users\\nasci\\.nuget\\packages\\sqlitepclraw.core\\2.1.2\\sqlitepclraw.core.2.1.2.nupkg.sha512",
-    "C:\\Users\\nasci\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.2\\sqlitepclraw.lib.e_sqlite3.2.1.2.nupkg.sha512",
-    "C:\\Users\\nasci\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.2\\sqlitepclraw.provider.e_sqlite3.2.1.2.nupkg.sha512",
-    "C:\\Users\\nasci\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+    "C:\\Users\\Kateto\\.nuget\\packages\\sqlite-net-pcl\\1.9.172\\sqlite-net-pcl.1.9.172.nupkg.sha512",
+    "C:\\Users\\Kateto\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.1.2\\sqlitepclraw.bundle_green.2.1.2.nupkg.sha512",
+    "C:\\Users\\Kateto\\.nuget\\packages\\sqlitepclraw.core\\2.1.2\\sqlitepclraw.core.2.1.2.nupkg.sha512",
+    "C:\\Users\\Kateto\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.2\\sqlitepclraw.lib.e_sqlite3.2.1.2.nupkg.sha512",
+    "C:\\Users\\Kateto\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.2\\sqlitepclraw.provider.e_sqlite3.2.1.2.nupkg.sha512",
+    "C:\\Users\\Kateto\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
   ],
   "logs": []
 }

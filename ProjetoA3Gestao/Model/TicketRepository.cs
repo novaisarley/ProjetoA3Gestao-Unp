@@ -1,46 +1,50 @@
-﻿using System;
+﻿using SQLite;
+using ProjetoA3Gestao.Model;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ProjetoA3Gestao.Model
+namespace ProjetoA3Gestao.Repository
 {
     public class TicketRepository
     {
-        private static TicketRepository _instance;
-        private List<Ticket> _tickets;
+        private readonly SQLiteConnection _database;
+        private readonly UsuarioRepository _usuarioRepository;
 
-        private TicketRepository()
+        public TicketRepository(SQLiteConnection database)
         {
-            _tickets = new List<Ticket>();
+            _database = database;
+            _database.CreateTable<Ticket>();
+            _usuarioRepository = new UsuarioRepository(database);
         }
 
-        public static TicketRepository Instance
+        public List<Ticket> GetTickets()
         {
-            get
+            var tickets = _database.Table<Ticket>().ToList();
+
+            // Carregar o objeto Usuario manualmente
+            foreach (var ticket in tickets)
             {
-                if (_instance == null)
-                {
-                    _instance = new TicketRepository();
-                }
-                return _instance;
+                ticket.Usuario = _usuarioRepository.GetUsuarioById(ticket.UsuarioId);
             }
+
+            return tickets;
         }
 
-        public List<Ticket> GetTickets() => _tickets;
+        public void AddTicket(Ticket ticket)
+        {
+            // Apenas insira o ID do usuário no ticket antes de salvar
+            ticket.UsuarioId = ticket.Usuario.Id;
+            _database.Insert(ticket);
+        }
 
-        public void AddTicket(Ticket ticket) => _tickets.Add(ticket);
-
-        public void RemoveTicket(Ticket ticket) => _tickets.Remove(ticket);
+        public void RemoveTicket(Ticket ticket) => _database.Delete(ticket);
 
         public void UpdateTicket(Ticket ticket)
         {
-            var index = _tickets.FindIndex(t => t.Id == ticket.Id);
-            if (index != -1)
-            {
-                _tickets[index] = ticket;
-            }
+            // Atualize o ID do usuário antes de salvar
+            ticket.UsuarioId = ticket.Usuario.Id;
+            _database.Update(ticket);
         }
     }
 }
+
