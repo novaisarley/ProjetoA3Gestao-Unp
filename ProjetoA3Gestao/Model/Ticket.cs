@@ -1,5 +1,7 @@
 ﻿using SQLite;
 
+//Classe responsável por descrever os atributos dos tickets
+
 namespace ProjetoA3Gestao.Model
 {
     public class Ticket
@@ -10,7 +12,7 @@ namespace ProjetoA3Gestao.Model
         public string Descricao { get; set; }
         public string Status { get; set; }
         public string Prioridade { get; set; }
-        public int UsuarioId { get; set; } // Adiciona esta linha
+        public int UsuarioId { get; set; }
         [Ignore]
         public Usuario Usuario { get; set; }
     }

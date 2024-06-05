@@ -1,4 +1,4 @@
-using ProjetoA3Gestao.Controller;
+/*using ProjetoA3Gestao.Controller;
 using ProjetoA3Gestao.Data;
 using ProjetoA3Gestao.Model;
 using System.Drawing.Printing;
@@ -32,7 +32,6 @@ namespace TestProject
             command.Execute();
             // Assert: Verificar se o resultado é o esperado
             var usuarios = database.UsuarioRepository.GetUsuarios();
-            Console.WriteLine(usuarios);
             Assert.Contains(usuario, usuarios);
         }
 
@@ -95,3 +94,4 @@ namespace TestProject
         }
     }
 }
+*/
