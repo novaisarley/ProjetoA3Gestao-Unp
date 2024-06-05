@@ -1,24 +1,22 @@
 ﻿using ProjetoA3Gestao.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ProjetoA3Gestao.Repository;
 
 namespace ProjetoA3Gestao.Controller
 {
     public class CreateTicketCommand : ICommand
     {
         private Ticket _ticket;
+        private TicketRepository _ticketRepository;
 
-        public CreateTicketCommand(Ticket ticket)
+        public CreateTicketCommand(Ticket ticket, TicketRepository ticketRepository)
         {
             _ticket = ticket;
+            _ticketRepository = ticketRepository;
         }
 
         public void Execute()
         {
-            TicketRepository.Instance.AddTicket(_ticket);
+            _ticketRepository.AddTicket(_ticket);
         }
     }
 }

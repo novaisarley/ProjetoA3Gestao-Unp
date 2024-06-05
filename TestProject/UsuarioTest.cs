@@ -1,12 +1,14 @@
 using ProjetoA3Gestao.Controller;
+using ProjetoA3Gestao.Data;
 using ProjetoA3Gestao.Model;
+using System.Drawing.Printing;
 using Xunit;
 
 namespace TestProject
 {
     public class UsuarioTest
     {
-        [Fact (DisplayName="Testa a validade da criação de um usuario")]
+        [Fact(DisplayName = "Testa a validade da criação de um usuario")]
         public void CriaUsuario()
         {
             // Arrange: Preparar os dados necessários para o teste
@@ -23,15 +25,17 @@ namespace TestProject
                 Cpf = "123.456.789-10"
             };
 
-            var command = new CreateUsuarioCommand(usuario);
+            var database = new Database();
+            var command = new CreateUsuarioCommand(usuario, database.UsuarioRepository); // Passando o UsuarioRepository do Database
 
             // Act: Executar a ação a ser testada
             command.Execute();
-
             // Assert: Verificar se o resultado é o esperado
-            var usuarios = UsuarioRepository.Instance.GetUsuarios();
+            var usuarios = database.UsuarioRepository.GetUsuarios();
+            Console.WriteLine(usuarios);
             Assert.Contains(usuario, usuarios);
         }
+
         [Fact(DisplayName = "Testa a validade da atualização de um usuario")]
         public void AtualizaUsuario()
         {
@@ -47,13 +51,15 @@ namespace TestProject
                 NumeroTelefone = "(11) 91234-5678",
                 Cpf = "123.456.789-00"
             };
-            var createCommand = new CreateUsuarioCommand(usuario);
+
+            var database = new Database();
+            var createCommand = new CreateUsuarioCommand(usuario, database.UsuarioRepository);
             createCommand.Execute();
 
             // Act
             usuario.Nome = "Teste Atualizado";
-            UsuarioRepository.Instance.UpdateUsuario(usuario);
-            var usuarios = UsuarioRepository.Instance.GetUsuarios();
+            database.UsuarioRepository.UpdateUsuario(usuario);
+            var usuarios = database.UsuarioRepository.GetUsuarios();
 
             // Assert
             Assert.Contains(usuario, usuarios);
@@ -75,12 +81,14 @@ namespace TestProject
                 NumeroTelefone = "(11) 91234-5678",
                 Cpf = "123.456.789-00"
             };
-            var createCommand = new CreateUsuarioCommand(usuario);
+
+            var database = new Database();
+            var createCommand = new CreateUsuarioCommand(usuario, database.UsuarioRepository);
             createCommand.Execute();
 
             // Act
-            UsuarioRepository.Instance.RemoveUsuario(usuario);
-            var usuarios = UsuarioRepository.Instance.GetUsuarios();
+            database.UsuarioRepository.RemoveUsuario(usuario);
+            var usuarios = database.UsuarioRepository.GetUsuarios();
 
             // Assert
             Assert.DoesNotContain(usuario, usuarios);
