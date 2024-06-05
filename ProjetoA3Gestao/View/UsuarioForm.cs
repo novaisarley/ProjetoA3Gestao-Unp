@@ -1,12 +1,6 @@
 ﻿using ProjetoA3Gestao.Controller;
 using ProjetoA3Gestao.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -129,7 +123,7 @@ namespace ProjetoA3Gestao.View
             return regex.IsMatch(cpf);
         }
 
-        private void btnCreateUsuario_Click(object sender, EventArgs e)
+        private async void btnCreateUsuario_Click(object sender, EventArgs e)
         {
             if (!ValidarCampos())
                 return;
@@ -145,12 +139,12 @@ namespace ProjetoA3Gestao.View
             usuario.Cpf = txtCpf.Text;
 
             var createCommand = new CreateUsuarioCommand(usuario);
-            createCommand.Execute();
+            await createCommand.ExecuteAsync();
 
-            RefreshUsuarioList();
+            await RefreshUsuarioListAsync();
         }
 
-        private void btnUpdateUsuario_Click(object sender, EventArgs e)
+        private async void btnUpdateUsuario_Click(object sender, EventArgs e)
         {
             if (!ValidarCampos())
                 return;
@@ -168,28 +162,28 @@ namespace ProjetoA3Gestao.View
                 usuario.Cpf = txtCpf.Text;
 
                 var updateCommand = new UpdateUsuarioCommand(usuario);
-                updateCommand.Execute();
+                await updateCommand.ExecuteAsync();
 
-                RefreshUsuarioList();
+                await RefreshUsuarioListAsync();
             }
         }
 
-        private void btnDeleteUsuario_Click(object sender, EventArgs e)
+        private async void btnDeleteUsuario_Click(object sender, EventArgs e)
         {
             var usuario = (Usuario)lstUsuarios.SelectedItem;
             if (usuario != null)
             {
                 var deleteCommand = new DeleteUsuarioCommand(usuario);
-                deleteCommand.Execute();
+                await deleteCommand.ExecuteAsync();
 
-                RefreshUsuarioList();
+                await RefreshUsuarioListAsync();
             }
         }
 
-        private void RefreshUsuarioList()
+        private async Task RefreshUsuarioListAsync()
         {
             lstUsuarios.DataSource = null;
-            lstUsuarios.DataSource = UsuarioRepository.Instance.GetUsuarios();
+            lstUsuarios.DataSource = await UsuarioRepository.Instance.GetUsuariosAsync();
             lstUsuarios.DisplayMember = "Nome";
         }
 
@@ -209,15 +203,10 @@ namespace ProjetoA3Gestao.View
             }
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private async void UsuarioForm_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void UsuarioForm_Load(object sender, EventArgs e)
-        {
-
+            await RefreshUsuarioListAsync();
         }
     }
-
 }
+

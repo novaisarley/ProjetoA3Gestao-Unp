@@ -200,13 +200,14 @@
             // 
             // label8
             // 
-            label8.AutoSize = true;
+            /*label8.AutoSize = true;
             label8.Location = new Point(12, 146);
             label8.Name = "label8";
             label8.Size = new Size(51, 15);
             label8.TabIndex = 19;
             label8.Text = "Número";
             label8.Click += label8_Click;
+            */
             // 
             // label9
             // 

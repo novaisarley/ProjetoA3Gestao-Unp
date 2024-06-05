@@ -1,8 +1,4 @@
 ﻿using ProjetoA3Gestao.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ProjetoA3Gestao.Controller
@@ -18,7 +14,12 @@ namespace ProjetoA3Gestao.Controller
 
         public void Execute()
         {
-            UsuarioRepository.Instance.RemoveUsuario(_usuario);
+            ExecuteAsync().Wait();
+        }
+
+        public async Task ExecuteAsync()
+        {
+            await UsuarioRepository.Instance.RemoveUsuarioAsync(_usuario);
         }
     }
 }

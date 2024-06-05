@@ -1,7 +1,7 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace ProjetoA3Gestao.Model
@@ -9,11 +9,12 @@ namespace ProjetoA3Gestao.Model
     public class UsuarioRepository
     {
         private static UsuarioRepository _instance;
+        private SQLiteAsyncConnection _database;
         private List<Usuario> _usuarios;
 
         private UsuarioRepository()
         {
-            _usuarios = new List<Usuario>();
+            InitializeDatabase().Wait();
         }
 
         public static UsuarioRepository Instance
@@ -28,19 +29,41 @@ namespace ProjetoA3Gestao.Model
             }
         }
 
-        public List<Usuario> GetUsuarios() => _usuarios;
+        private async Task InitializeDatabase()
+        {
+            var databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ProjetoA3Gestao.db3");
+            _database = new SQLiteAsyncConnection(databasePath);
+            await _database.CreateTableAsync<Usuario>();
+            _usuarios = await _database.Table<Usuario>().ToListAsync(); // Carregar usuários do banco de dados
+        }
 
-        public void AddUsuario(Usuario usuario) => _usuarios.Add(usuario);
+        public async Task<List<Usuario>> GetUsuariosAsync()
+        {
+            _usuarios = await _database.Table<Usuario>().ToListAsync();
+            return _usuarios;
+        }
 
-        public void RemoveUsuario(Usuario usuario) => _usuarios.Remove(usuario);
+        public async Task AddUsuarioAsync(Usuario usuario)
+        {
+            await _database.InsertAsync(usuario);
+            _usuarios.Add(usuario);
+        }
 
-        public void UpdateUsuario(Usuario usuario)
+        public async Task RemoveUsuarioAsync(Usuario usuario)
+        {
+            await _database.DeleteAsync(usuario);
+            _usuarios.Remove(usuario);
+        }
+
+        public async Task UpdateUsuarioAsync(Usuario usuario)
         {
             var index = _usuarios.FindIndex(u => u.Id == usuario.Id);
             if (index != -1)
             {
                 _usuarios[index] = usuario;
+                await _database.UpdateAsync(usuario);
             }
         }
     }
 }
+

@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProjetoA3Gestao.Model;
 using ProjetoA3Gestao.Controller;
+using ProjetoA3Gestao.Model;
 
 namespace ProjetoA3Gestao
 {
@@ -13,16 +14,16 @@ namespace ProjetoA3Gestao
         public TicketForm()
         {
             InitializeComponent();
-            LoadUsuarios();
+            _ = LoadUsuariosAsync();
+            _ = RefreshTicketListAsync();
             InitializeListBox();
-            RefreshTicketList();
             cmbPrioridade.DataSource = new List<string> { "baixa", "média", "alta", "urgente" };
             cmbStatus.DataSource = new List<string> { "na fila", "em andamento", "fechado", "cancelado" };
         }
 
-        private void LoadUsuarios()
+        private async Task LoadUsuariosAsync()
         {
-            cmbUsuarios.DataSource = UsuarioRepository.Instance.GetUsuarios();
+            cmbUsuarios.DataSource = await UsuarioRepository.Instance.GetUsuariosAsync();
             cmbUsuarios.DisplayMember = "Nome";
         }
 
@@ -31,13 +32,12 @@ namespace ProjetoA3Gestao
             lstTickets.Items.Clear();
         }
 
-        private void RefreshTicketList()
+        private async Task RefreshTicketListAsync()
         {
             lstTickets.Items.Clear();
-            var tickets = TicketRepository.Instance.GetTickets();
+            var tickets = await TicketRepository.Instance.GetTicketsAsync();
             foreach (var ticket in tickets)
             {
-                // Adicionar uma representação manual de cada ticket à lista
                 var displayText = $"Título: {ticket.Titulo} | Status: {ticket.Status} | Prioridade: ({ticket.Prioridade})";
                 lstTickets.Items.Add(new ListBoxItem { DisplayText = displayText, Ticket = ticket });
             }
@@ -48,7 +48,7 @@ namespace ProjetoA3Gestao
             }
         }
 
-        private void btnCreateTicket_Click(object sender, EventArgs e)
+        private async void btnCreateTicket_Click(object sender, EventArgs e)
         {
             var ticket = _ticketFactory.CreateTicket();
             ticket.Titulo = txtTitulo.Text;
@@ -58,12 +58,12 @@ namespace ProjetoA3Gestao
             ticket.Usuario = (Usuario)cmbUsuarios.SelectedItem;
 
             var createCommand = new CreateTicketCommand(ticket);
-            createCommand.Execute();
+            await createCommand.ExecuteAsync();
 
-            RefreshTicketList();
+            await RefreshTicketListAsync();
         }
 
-        private void btnUpdateTicket_Click(object sender, EventArgs e)
+        private async void btnUpdateTicket_Click(object sender, EventArgs e)
         {
             if (lstTickets.SelectedItem != null)
             {
@@ -77,13 +77,13 @@ namespace ProjetoA3Gestao
                 ticket.Usuario = (Usuario)cmbUsuarios.SelectedItem;
 
                 var updateCommand = new UpdateTicketCommand(ticket);
-                updateCommand.Execute();
+                await updateCommand.ExecuteAsync();
 
-                RefreshTicketList();
+                await RefreshTicketListAsync();
             }
         }
 
-        private void btnDeleteTicket_Click(object sender, EventArgs e)
+        private async void btnDeleteTicket_Click(object sender, EventArgs e)
         {
             if (lstTickets.SelectedItem != null)
             {
@@ -91,9 +91,9 @@ namespace ProjetoA3Gestao
                 var ticket = selectedItem.Ticket;
 
                 var deleteCommand = new DeleteTicketCommand(ticket);
-                deleteCommand.Execute();
+                await deleteCommand.ExecuteAsync();
 
-                RefreshTicketList();
+                await RefreshTicketListAsync();
             }
         }
 
