@@ -1,27 +1,28 @@
 ﻿using ProjetoA3Gestao.Model;
-using ProjetoA3Gestao.Repository; // Importe o namespace onde está a classe UsuarioRepository
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ProjetoA3Gestao.Repository;
+
+//Classe responsável por realizar uma atualização no cadastro de um usuário
 
 namespace ProjetoA3Gestao.Controller
 {
+    //Implementação da interface ICommand
     public class UpdateUsuarioCommand : ICommand
     {
+        //Indicação do usuário escolhido para ser atualizado e o repositório de seu local
         private Usuario _usuario;
-        private UsuarioRepository _usuarioRepository; // Adicione uma referência para UsuarioRepository
+        private UsuarioRepository _usuarioRepository;
 
+        //Construtor da classe
         public UpdateUsuarioCommand(Usuario usuario, UsuarioRepository usuarioRepository)
         {
             _usuario = usuario;
-            _usuarioRepository = usuarioRepository; // Passe uma instância válida de UsuarioRepository
+            _usuarioRepository = usuarioRepository; 
         }
 
+        //Comando para atualizar um usuário
         public void Execute()
         {
-            _usuarioRepository.UpdateUsuario(_usuario); // Use a instância de UsuarioRepository passada no construtor
+            _usuarioRepository.UpdateUsuario(_usuario); 
         }
     }
 }

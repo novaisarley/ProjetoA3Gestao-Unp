@@ -1,6 +1,5 @@
 ﻿using ProjetoA3Gestao.Model;
 using SQLite;
-using System.Collections.Generic;
 
 namespace ProjetoA3Gestao.Repository
 {
