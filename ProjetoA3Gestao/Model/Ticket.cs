@@ -13,6 +13,7 @@ namespace ProjetoA3Gestao.Model
         public string Descricao { get; set; }
         public string Status { get; set; }
         public string Prioridade { get; set; }
-        public Usuario Usuario { get; internal set; }
+        public Usuario Usuario { get; set; }
     }
+    
 }

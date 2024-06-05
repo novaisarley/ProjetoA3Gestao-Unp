@@ -17,7 +17,12 @@ namespace ProjetoA3Gestao.Model
 
         public override Ticket CreateTicket()
         {
-            return new Ticket { Id = _idCounter++ };
+
+            Ticket ticket = new Ticket{ Id = _idCounter++ };
+            Usuario usuario = new Usuario { Nome = "UserTeste" };
+            ticket.Usuario = usuario;
+
+            return ticket;
         }
     }
 }

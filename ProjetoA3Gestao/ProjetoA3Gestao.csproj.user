@@ -4,6 +4,9 @@
     <Compile Update="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\TicketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\UsuarioForm.cs">
       <SubType>Form</SubType>
     </Compile>
