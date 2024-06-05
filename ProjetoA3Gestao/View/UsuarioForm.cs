@@ -66,7 +66,11 @@ namespace ProjetoA3Gestao.View
 
                 RefreshUsuarioList();
             }
-        }
+
+
+
+
+        } 
 
         private void RefreshUsuarioList()
         {
