@@ -4,6 +4,7 @@ using ProjetoA3Gestao.Repository;
 using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace ProjetoA3Gestao
@@ -29,6 +30,7 @@ namespace ProjetoA3Gestao
             RefreshTicketList();
             cmbPrioridade.DataSource = new List<string> { "baixa", "média", "alta", "urgente" };
             cmbStatus.DataSource = new List<string> { "na fila", "em andamento", "fechado", "cancelado" };
+            ClearForm();
         }
 
         private void LoadUsuarios()
@@ -48,7 +50,7 @@ namespace ProjetoA3Gestao
             var tickets = _ticketRepository.GetTickets();
             foreach (var ticket in tickets)
             {
-                var displayText = $"Título: {ticket.Titulo} | Status: {ticket.Status} | Prioridade: ({ticket.Prioridade})";
+                var displayText = $"Título: {ticket.Titulo} | Status: {ticket.Status} | Prioridade: ({ticket.Prioridade}) | User: {ticket.Usuario.Nome} {ticket.Usuario.Id}";
                 lstTickets.Items.Add(new ListBoxItem { DisplayText = displayText, Ticket = ticket });
             }
 
@@ -58,8 +60,55 @@ namespace ProjetoA3Gestao
             }
         }
 
+        private void ClearForm()
+        {
+            txtTitulo.Clear();
+            txtDescricao.Clear();
+            cmbStatus.SelectedIndex = -1;
+            cmbPrioridade.SelectedIndex = -1;
+            cmbUsuarios.SelectedIndex = -1;
+        }
+
+        private bool ValidarCampos()
+        {
+            if (string.IsNullOrWhiteSpace(txtTitulo.Text))
+            {
+                MessageBox.Show("Por favor, insira o título.", "Campo obrigatório", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtDescricao.Text))
+            {
+                MessageBox.Show("Por favor, insira a descrição.", "Campo obrigatório", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (cmbStatus.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor, selecione o status.", "Campo obrigatório", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (cmbPrioridade.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor, selecione a prioridade.", "Campo obrigatório", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (cmbUsuarios.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor, selecione um usuário.", "Campo obrigatório", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
+        }
+
         private void btnCreateTicket_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos())
+                return;
+
             var ticket = _ticketFactory.CreateTicket();
             ticket.Titulo = txtTitulo.Text;
             ticket.Descricao = txtDescricao.Text;
@@ -71,12 +120,16 @@ namespace ProjetoA3Gestao
             createCommand.Execute();
 
             RefreshTicketList();
+            ClearForm();
         }
 
         private void btnUpdateTicket_Click(object sender, EventArgs e)
         {
             if (lstTickets.SelectedItem != null)
             {
+                if (!ValidarCampos())
+                    return;
+
                 var selectedItem = (ListBoxItem)lstTickets.SelectedItem;
                 var ticket = selectedItem.Ticket;
 
@@ -85,11 +138,13 @@ namespace ProjetoA3Gestao
                 ticket.Status = cmbStatus.SelectedItem.ToString();
                 ticket.Prioridade = cmbPrioridade.SelectedItem.ToString();
                 ticket.Usuario = (Usuario)cmbUsuarios.SelectedItem;
+                ticket.UsuarioId = ticket.Usuario.Id;
 
                 var updateCommand = new UpdateTicketCommand(ticket, _ticketRepository);
                 updateCommand.Execute();
 
                 RefreshTicketList();
+                ClearForm();
             }
         }
 
@@ -104,6 +159,7 @@ namespace ProjetoA3Gestao
                 deleteCommand.Execute();
 
                 RefreshTicketList();
+                ClearForm();
             }
         }
 
@@ -118,15 +174,11 @@ namespace ProjetoA3Gestao
                 txtDescricao.Text = ticket.Descricao;
                 cmbStatus.SelectedItem = ticket.Status;
                 cmbPrioridade.SelectedItem = ticket.Prioridade;
-                cmbUsuarios.SelectedItem = ticket.Usuario;
+                cmbUsuarios.SelectedItem = _usuarioRepository.GetUsuarios().FirstOrDefault(u => u.Id == ticket.UsuarioId);
             }
             else
             {
-                txtTitulo.Clear();
-                txtDescricao.Clear();
-                cmbStatus.SelectedIndex = -1;
-                cmbPrioridade.SelectedIndex = -1;
-                cmbUsuarios.SelectedIndex = -1;
+                ClearForm();
             }
         }
 
@@ -142,4 +194,3 @@ namespace ProjetoA3Gestao
         }
     }
 }
-

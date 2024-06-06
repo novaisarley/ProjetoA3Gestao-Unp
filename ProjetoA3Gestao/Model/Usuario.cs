@@ -17,6 +17,22 @@ namespace ProjetoA3Gestao.Model
         public string Cep { get; set; }
         public string NumeroTelefone { get; set; }
         public string Cpf { get; set; }
+
+        // Sobrescrever o método Equals para comparar com base no Id
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            Usuario other = (Usuario)obj;
+            return Id == other.Id;
+        }
+
+        // Sobrescrever o método GetHashCode para evitar advertências do compilador
+        public override int GetHashCode()
+        {
+            return Id.GetHashCode();
+        }
         public bool ValidarTelefone()
             {
                 //Validação de telefone (Brasil)

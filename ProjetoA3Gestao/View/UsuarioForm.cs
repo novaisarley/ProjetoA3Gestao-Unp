@@ -30,6 +30,19 @@ namespace ProjetoA3Gestao.View
             _usuarioRepository = new UsuarioRepository(_database); // Passe a conexão para o repositório
 
             RefreshUsuarioList(); // Adicione o carregamento inicial da lista de usuários
+            ClearForm();
+        }
+
+        private void ClearForm()
+        {
+            txtNome.Clear();
+            txtEmail.Clear();
+            txtEndereco.Clear();
+            txtNumeroEndereco.Clear();
+            txtComplemento.Clear();
+            txtCep.Clear();
+            txtNumeroTelefone.Clear();
+            txtCpf.Clear();
         }
 
         private bool ValidarCampos()
@@ -157,6 +170,7 @@ namespace ProjetoA3Gestao.View
             _usuarioRepository.AddUsuario(usuario); // Adicionar o usuário usando UsuarioRepository
 
             RefreshUsuarioList();
+            ClearForm();
         }
 
         private void btnUpdateUsuario_Click(object sender, EventArgs e)
@@ -179,6 +193,7 @@ namespace ProjetoA3Gestao.View
                 _usuarioRepository.UpdateUsuario(usuario); // Atualizar o usuário usando UsuarioRepository
 
                 RefreshUsuarioList();
+                ClearForm();
             }
         }
 
@@ -190,6 +205,7 @@ namespace ProjetoA3Gestao.View
                 _usuarioRepository.RemoveUsuario(usuario); // Remover o usuário usando UsuarioRepository
 
                 RefreshUsuarioList();
+                ClearForm();
             }
         }
 
@@ -227,4 +243,3 @@ namespace ProjetoA3Gestao.View
         }
     }
 }
-

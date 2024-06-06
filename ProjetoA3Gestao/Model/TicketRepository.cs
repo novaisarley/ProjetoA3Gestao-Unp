@@ -3,6 +3,9 @@ using ProjetoA3Gestao.Model;
 
 namespace ProjetoA3Gestao.Repository
 {
+    // Padrão de Projeto: Repository
+    // Classe TicketRepository fornece uma camada de abstração sobre o acesso aos dados dos tickets,
+    // separando a lógica de acesso a dados da lógica de negócios.
     public class TicketRepository
     {
         private readonly SQLiteConnection _database;
@@ -15,6 +18,7 @@ namespace ProjetoA3Gestao.Repository
             _usuarioRepository = new UsuarioRepository(database);
         }
 
+        // Retorna uma lista de tickets, carregando manualmente os objetos Usuario associados a cada ticket.
         public List<Ticket> GetTickets()
         {
             var tickets = _database.Table<Ticket>().ToList();
@@ -28,6 +32,7 @@ namespace ProjetoA3Gestao.Repository
             return tickets;
         }
 
+        // Adiciona um novo ticket ao banco de dados.
         public void AddTicket(Ticket ticket)
         {
             // Apenas insira o ID do usuário no ticket antes de salvar
@@ -35,8 +40,10 @@ namespace ProjetoA3Gestao.Repository
             _database.Insert(ticket);
         }
 
+        // Remove um ticket do banco de dados.
         public void RemoveTicket(Ticket ticket) => _database.Delete(ticket);
 
+        // Atualiza as informações de um ticket no banco de dados.
         public void UpdateTicket(Ticket ticket)
         {
             // Atualize o ID do usuário antes de salvar
@@ -45,4 +52,3 @@ namespace ProjetoA3Gestao.Repository
         }
     }
 }
-

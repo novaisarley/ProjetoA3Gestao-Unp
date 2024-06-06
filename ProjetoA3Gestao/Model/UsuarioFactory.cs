@@ -4,7 +4,9 @@
     {
         public abstract Usuario CreateUsuario();
     }
-
+    // Padrão de Projeto: Factory
+    // Classe ConcreteUsuarioFactory implementa a interface UsuarioFactory para criar objetos Usuario,
+    // permitindo a criação de instâncias concretas de Usuario com base nas necessidades do sistema.
     public class ConcreteUsuarioFactory : UsuarioFactory
     {
         private static int _idCounter;

@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Kateto\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Kateto\\.nuget\\packages"
+      "C:\\Users\\nasci\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\nasci\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,
