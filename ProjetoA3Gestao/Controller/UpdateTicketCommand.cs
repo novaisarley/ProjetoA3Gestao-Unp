@@ -1,24 +1,28 @@
 ﻿using ProjetoA3Gestao.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ProjetoA3Gestao.Repository;
+
+//Classe responsável por realizar uma atualização no cadastro de um ticket
 
 namespace ProjetoA3Gestao.Controller
 {
+    //Implementação da interface ICommand
     public class UpdateTicketCommand : ICommand
     {
+        //Indicação do ticket escolhido para ser atualizado e o repositório de seu local
         private Ticket _ticket;
+        private TicketRepository _ticketRepository;
 
-        public UpdateTicketCommand(Ticket ticket)
+        //Construtor da classe
+        public UpdateTicketCommand(Ticket ticket, TicketRepository ticketRepository)
         {
             _ticket = ticket;
+            _ticketRepository = ticketRepository;
         }
 
+        //Comando para atualizar um ticket
         public void Execute()
         {
-            TicketRepository.Instance.UpdateTicket(_ticket);
+            _ticketRepository.UpdateTicket(_ticket);
         }
     }
 }

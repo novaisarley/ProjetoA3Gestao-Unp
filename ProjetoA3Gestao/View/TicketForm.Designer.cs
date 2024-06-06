@@ -174,10 +174,10 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(cmbUsuarios);
             Controls.Add(lstTickets);
             Controls.Add(cmbPrioridade);
             Controls.Add(cmbStatus);
+            Controls.Add(cmbUsuarios);
             Controls.Add(txtDescricao);
             Controls.Add(txtTitulo);
             Controls.Add(btnDeleteTicket);

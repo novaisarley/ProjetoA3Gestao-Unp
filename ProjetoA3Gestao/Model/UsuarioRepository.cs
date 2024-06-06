@@ -1,46 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ProjetoA3Gestao.Model;
+using SQLite;
 
-namespace ProjetoA3Gestao.Model
+namespace ProjetoA3Gestao.Repository
 {
+    // Padrão de Projeto: Repository
+    // Classe UsuarioRepository fornece uma camada de abstração sobre o acesso aos dados dos usuários,
+    // separando a lógica de acesso a dados da lógica de negócios.
     public class UsuarioRepository
     {
-        private static UsuarioRepository _instance;
-        private List<Usuario> _usuarios;
+        private readonly SQLiteConnection _database;
 
-        private UsuarioRepository()
+        public UsuarioRepository(SQLiteConnection database)
         {
-            _usuarios = new List<Usuario>();
+            _database = database;
+            _database.CreateTable<Usuario>();
         }
 
-        public static UsuarioRepository Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new UsuarioRepository();
-                }
-                return _instance;
-            }
-        }
+        // Retorna uma lista de todos os usuários do banco de dados.
+        public List<Usuario> GetUsuarios() => _database.Table<Usuario>().ToList();
 
-        public List<Usuario> GetUsuarios() => _usuarios;
+        // Retorna um usuário com o ID especificado do banco de dados.
+        public Usuario GetUsuarioById(int id) => _database.Find<Usuario>(id);
 
-        public void AddUsuario(Usuario usuario) => _usuarios.Add(usuario);
+        // Adiciona um novo usuário ao banco de dados.
+        public void AddUsuario(Usuario usuario) => _database.Insert(usuario);
 
-        public void RemoveUsuario(Usuario usuario) => _usuarios.Remove(usuario);
+        // Remove um usuário do banco de dados.
+        public void RemoveUsuario(Usuario usuario) => _database.Delete(usuario);
 
-        public void UpdateUsuario(Usuario usuario)
-        {
-            var index = _usuarios.FindIndex(u => u.Id == usuario.Id);
-            if (index != -1)
-            {
-                _usuarios[index] = usuario;
-            }
-        }
+        // Atualiza as informações de um usuário no banco de dados.
+        public void UpdateUsuario(Usuario usuario) => _database.Update(usuario);
     }
 }

@@ -1,24 +1,28 @@
 ﻿using ProjetoA3Gestao.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ProjetoA3Gestao.Repository;
+
+//Classe é responsável pela criação de novos usuários
 
 namespace ProjetoA3Gestao.Controller
 {
+    //Implementação da interface ICommand
     public class CreateUsuarioCommand : ICommand
     {
+        //Usuário a ser criado e indicação de onde ele será armazenado
         private Usuario _usuario;
+        private UsuarioRepository _usuarioRepository;
 
-        public CreateUsuarioCommand(Usuario usuario)
+        //Construtor da classe
+        public CreateUsuarioCommand(Usuario usuario, UsuarioRepository usuarioRepository)
         {
             _usuario = usuario;
+            _usuarioRepository = usuarioRepository;
         }
 
+        //Comando para criar o novo usuário
         public void Execute()
         {
-            UsuarioRepository.Instance.AddUsuario(_usuario);
+            _usuarioRepository.AddUsuario(_usuario);
         }
     }
 }
