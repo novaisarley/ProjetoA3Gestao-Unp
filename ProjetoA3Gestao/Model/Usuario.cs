@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using SQLite;
+using System.Text.RegularExpressions;
 
 //Classe responsável por descrever os atributos dos usuários
 
@@ -6,6 +7,7 @@ namespace ProjetoA3Gestao.Model
 {
     public class Usuario
         {
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
