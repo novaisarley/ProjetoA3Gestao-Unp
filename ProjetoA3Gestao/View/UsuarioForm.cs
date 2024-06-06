@@ -1,38 +1,35 @@
-﻿using ProjetoA3Gestao.Controller;
-using ProjetoA3Gestao.Model;
-using ProjetoA3Gestao.Repository; // Importe o namespace onde está a classe UsuarioRepository
-using SQLite; // Importe a biblioteca SQLite
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿using ProjetoA3Gestao.Model;
+using ProjetoA3Gestao.Repository;
+using SQLite;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace ProjetoA3Gestao.View
 {
+    //Classe que gerencia o formulário de gerenciamento de usuários
     public partial class UsuarioForm : Form
     {
         private UsuarioFactory _usuarioFactory = new ConcreteUsuarioFactory();
-        private SQLiteConnection _database; // Adicione a conexão SQLite
-        private UsuarioRepository _usuarioRepository; // Remova a instância de UsuarioRepository sem inicialização
+        // Adicione a conexão SQLite
+        private SQLiteConnection _database;
+        // Remove a instância de UsuarioRepository sem inicialização
+        private UsuarioRepository _usuarioRepository; 
 
+        //Construtor da classe
         public UsuarioForm()
         {
             InitializeComponent();
 
             // Inicialize a conexão SQLite e passe-a para o repositório
             _database = new SQLiteConnection("Data Source=database.db;Version=3;");
-            _usuarioRepository = new UsuarioRepository(_database); // Passe a conexão para o repositório
+            // Passe a conexão para o repositório
+            _usuarioRepository = new UsuarioRepository(_database); 
 
-            RefreshUsuarioList(); // Adicione o carregamento inicial da lista de usuários
+            RefreshUsuarioList();
             ClearForm();
         }
 
+        //Limpar formulário
         private void ClearForm()
         {
             txtNome.Clear();
@@ -45,6 +42,7 @@ namespace ProjetoA3Gestao.View
             txtCpf.Clear();
         }
 
+        //Sessão de validação dos dados do usuário
         private bool ValidarCampos()
         {
             if (string.IsNullOrWhiteSpace(txtNome.Text))
@@ -152,6 +150,7 @@ namespace ProjetoA3Gestao.View
             return regex.IsMatch(cpf);
         }
 
+        //Botão de criar usuário
         private void btnCreateUsuario_Click(object sender, EventArgs e)
         {
             if (!ValidarCampos())
@@ -167,12 +166,13 @@ namespace ProjetoA3Gestao.View
             usuario.NumeroTelefone = txtNumeroTelefone.Text;
             usuario.Cpf = txtCpf.Text;
 
-            _usuarioRepository.AddUsuario(usuario); // Adicionar o usuário usando UsuarioRepository
+            _usuarioRepository.AddUsuario(usuario);
 
             RefreshUsuarioList();
             ClearForm();
         }
 
+        //Botão de editar usuário
         private void btnUpdateUsuario_Click(object sender, EventArgs e)
         {
             if (!ValidarCampos())
@@ -190,19 +190,20 @@ namespace ProjetoA3Gestao.View
                 usuario.NumeroTelefone = txtNumeroTelefone.Text;
                 usuario.Cpf = txtCpf.Text;
 
-                _usuarioRepository.UpdateUsuario(usuario); // Atualizar o usuário usando UsuarioRepository
+                _usuarioRepository.UpdateUsuario(usuario);
 
                 RefreshUsuarioList();
                 ClearForm();
             }
         }
 
+        //Botão de remover usuário
         private void btnDeleteUsuario_Click(object sender, EventArgs e)
         {
             var usuario = (Usuario)lstUsuarios.SelectedItem;
             if (usuario != null)
             {
-                _usuarioRepository.RemoveUsuario(usuario); // Remover o usuário usando UsuarioRepository
+                _usuarioRepository.RemoveUsuario(usuario);
 
                 RefreshUsuarioList();
                 ClearForm();
@@ -212,10 +213,11 @@ namespace ProjetoA3Gestao.View
         private void RefreshUsuarioList()
         {
             lstUsuarios.DataSource = null;
-            lstUsuarios.DataSource = _usuarioRepository.GetUsuarios(); // Usar a instância de UsuarioRepository
+            lstUsuarios.DataSource = _usuarioRepository.GetUsuarios();
             lstUsuarios.DisplayMember = "Nome";
         }
 
+        //Atualizar dados do formulário conforme usuário selecionado
         private void lstUsuarios_SelectedIndexChanged(object sender, EventArgs e)
         {
             var usuario = (Usuario)lstUsuarios.SelectedItem;

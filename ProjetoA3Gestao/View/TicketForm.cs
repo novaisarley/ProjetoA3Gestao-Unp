@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace ProjetoA3Gestao
 {
+    //Classe que representa o formulário de gerenciamento dos tickets
     public partial class TicketForm : Form
     {
         private TicketFactory _ticketFactory = new ConcreteTicketFactory();
@@ -33,17 +34,20 @@ namespace ProjetoA3Gestao
             ClearForm();
         }
 
+        //Carrega a ComboBox de usuários
         private void LoadUsuarios()
         {
             cmbUsuarios.DataSource = _usuarioRepository.GetUsuarios();
             cmbUsuarios.DisplayMember = "Nome";
         }
 
+        //Inicializa lista de tickets
         private void InitializeListBox()
         {
             lstTickets.Items.Clear();
         }
 
+        //Atualiza lista de tickets
         private void RefreshTicketList()
         {
             lstTickets.Items.Clear();
@@ -60,6 +64,7 @@ namespace ProjetoA3Gestao
             }
         }
 
+        //Limpa o formulário
         private void ClearForm()
         {
             txtTitulo.Clear();
@@ -69,6 +74,7 @@ namespace ProjetoA3Gestao
             cmbUsuarios.SelectedIndex = -1;
         }
 
+        //Validação dos campos inseridos no formulário
         private bool ValidarCampos()
         {
             if (string.IsNullOrWhiteSpace(txtTitulo.Text))
@@ -104,6 +110,7 @@ namespace ProjetoA3Gestao
             return true;
         }
 
+        //Botão de criar ticket
         private void btnCreateTicket_Click(object sender, EventArgs e)
         {
             if (!ValidarCampos())
@@ -123,6 +130,7 @@ namespace ProjetoA3Gestao
             ClearForm();
         }
 
+        //Botão de atualizar ticket
         private void btnUpdateTicket_Click(object sender, EventArgs e)
         {
             if (lstTickets.SelectedItem != null)
@@ -148,6 +156,7 @@ namespace ProjetoA3Gestao
             }
         }
 
+        //Botão de deletar ticket
         private void btnDeleteTicket_Click(object sender, EventArgs e)
         {
             if (lstTickets.SelectedItem != null)
@@ -163,6 +172,7 @@ namespace ProjetoA3Gestao
             }
         }
 
+        //Atualiza dados do formulário com ticket selecionado
         private void lstTickets_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstTickets.SelectedItem != null)
@@ -182,6 +192,7 @@ namespace ProjetoA3Gestao
             }
         }
 
+        //Instancia a lista de tickets
         private class ListBoxItem
         {
             public string DisplayText { get; set; }

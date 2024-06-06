@@ -1,12 +1,185 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2984F937-619B-4E41-A219-717B3F93F502}|..\\TestProject\\TestProject.csproj|c:\\users\\kateto\\source\\repos\\projetoa3gestao-unp\\testproject\\usuariotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2984F937-619B-4E41-A219-717B3F93F502}|..\\TestProject\\TestProject.csproj|c:\\users\\kateto\\source\\repos\\projetoa3gestao-unp\\testproject\\testproject.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|c:\\users\\kateto\\source\\repos\\projetoa3gestao-unp\\projetoa3gestao\\view\\usuarioform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|solutionrelative:view\\usuarioform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|c:\\users\\kateto\\source\\repos\\projetoa3gestao-unp\\projetoa3gestao\\view\\ticketform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|solutionrelative:view\\ticketform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|c:\\users\\kateto\\source\\repos\\projetoa3gestao-unp\\projetoa3gestao\\view\\usuarioform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|solutionrelative:view\\usuarioform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|c:\\users\\kateto\\source\\repos\\projetoa3gestao-unp\\projetoa3gestao\\view\\ticketform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|solutionrelative:view\\ticketform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|c:\\users\\kateto\\source\\repos\\projetoa3gestao-unp\\projetoa3gestao\\view\\ticketform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|solutionrelative:view\\ticketform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|c:\\users\\kateto\\source\\repos\\projetoa3gestao-unp\\projetoa3gestao\\view\\usuarioform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|solutionrelative:view\\usuarioform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|c:\\users\\kateto\\source\\repos\\projetoa3gestao-unp\\projetoa3gestao\\view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|solutionrelative:view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|c:\\users\\kateto\\source\\repos\\projetoa3gestao-unp\\projetoa3gestao\\view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F8D4BA4-EF6C-4E9D-842D-6577F25A5D69}|ProjetoA3Gestao.csproj|solutionrelative:view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuarioTest.cs",
+              "DocumentMoniker": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\TestProject\\UsuarioTest.cs",
+              "RelativeDocumentMoniker": "..\\TestProject\\UsuarioTest.cs",
+              "ToolTip": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\TestProject\\UsuarioTest.cs",
+              "RelativeToolTip": "..\\TestProject\\UsuarioTest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T02:29:39.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TestProject",
+              "DocumentMoniker": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\TestProject\\TestProject.csproj",
+              "RelativeDocumentMoniker": "..\\TestProject\\TestProject.csproj",
+              "ToolTip": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\TestProject\\TestProject.csproj",
+              "RelativeToolTip": "..\\TestProject\\TestProject.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-06T02:29:37.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TicketForm.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\TicketForm.cs",
+              "RelativeDocumentMoniker": "View\\TicketForm.cs",
+              "ToolTip": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\TicketForm.cs [Projeto]",
+              "RelativeToolTip": "View\\TicketForm.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T02:26:59.603Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsuarioForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\UsuarioForm.Designer.cs",
+              "RelativeDocumentMoniker": "View\\UsuarioForm.Designer.cs",
+              "ToolTip": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\UsuarioForm.Designer.cs",
+              "RelativeToolTip": "View\\UsuarioForm.Designer.cs",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T02:22:24.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsuarioForm.cs",
+              "DocumentMoniker": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\UsuarioForm.cs",
+              "RelativeDocumentMoniker": "View\\UsuarioForm.cs",
+              "ToolTip": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\UsuarioForm.cs",
+              "RelativeToolTip": "View\\UsuarioForm.cs",
+              "ViewState": "AQIAANsAAAAAAAAAAAAcwPcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T02:22:21.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsuarioForm.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\UsuarioForm.cs",
+              "RelativeDocumentMoniker": "View\\UsuarioForm.cs",
+              "ToolTip": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\UsuarioForm.cs [Projeto]",
+              "RelativeToolTip": "View\\UsuarioForm.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T02:22:18.142Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TicketForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\TicketForm.Designer.cs",
+              "RelativeDocumentMoniker": "View\\TicketForm.Designer.cs",
+              "ToolTip": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\TicketForm.Designer.cs",
+              "RelativeToolTip": "View\\TicketForm.Designer.cs",
+              "ViewState": "AQIAALcAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T02:22:05.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TicketForm.cs",
+              "DocumentMoniker": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\TicketForm.cs",
+              "RelativeDocumentMoniker": "View\\TicketForm.cs",
+              "ToolTip": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\TicketForm.cs",
+              "RelativeToolTip": "View\\TicketForm.cs",
+              "ViewState": "AQIAAJsAAAAAAAAAAAAAwMIAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T02:13:25.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\MainForm.cs",
+              "RelativeDocumentMoniker": "View\\MainForm.cs",
+              "ToolTip": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\MainForm.cs",
+              "RelativeToolTip": "View\\MainForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T02:15:32.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainForm.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\MainForm.cs",
+              "RelativeDocumentMoniker": "View\\MainForm.cs",
+              "ToolTip": "C:\\Users\\Kateto\\Source\\Repos\\ProjetoA3Gestao-Unp\\ProjetoA3Gestao\\View\\MainForm.cs [Projeto]",
+              "RelativeToolTip": "View\\MainForm.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T02:15:29.371Z",
+              "EditorCaption": " [Projeto]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
